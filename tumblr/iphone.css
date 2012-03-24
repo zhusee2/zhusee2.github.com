@@ -47,3 +47,16 @@ body {
 .post-content {
   font-size: 120%;
 }
+
+a.standardView {
+  background: rgba(0, 0, 0, .6);
+  color: #dedede;
+  font-size: 85%;
+  border-radius: 0.4em;
+  padding: 0.4em 1em;
+  position: absolute;
+}
+#header a.standardView {
+  right: 0.4em;
+  top: 0.4em;
+}
