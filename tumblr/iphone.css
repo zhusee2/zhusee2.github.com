@@ -1,0 +1,49 @@
+body {
+  -webkit-text-size-adjust: 100%;
+}
+
+#wrapper, #header-top,
+#container, #description,
+.post-info, .post-info .parts,
+.post-content,
+#footer, #footer-bot {
+  max-width: 480px;
+  width: 100%;
+  overflow: hidden;
+  -webkit-box-sizing: border-box;
+}
+
+#header-top {
+  padding: 3em 0 0 20px;
+}
+#header-icons {
+  width: 220px;
+  top: 0;
+  overflow: auto;
+  position: relative;
+  -webkit-transform: scale(0.9) translateX(-1em);
+}
+#header-icons .btn-twitter a {
+  margin-left: 0;
+}
+
+#description, .title-texture, .post-info, .post-content, #footer-bot {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.post-color {
+  min-width: 200px;
+}
+.post-color .title-texture h2  {
+  min-width: 100px;
+}
+
+.post-content > img, .post-content > a img,
+.post-content > p img, .photoSetSlider img {
+  max-width: 100% !important;
+}
+
+.post-content {
+  font-size: 120%;
+}
