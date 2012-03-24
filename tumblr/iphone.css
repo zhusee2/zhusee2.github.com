@@ -55,9 +55,12 @@ a.standardView {
   border-radius: 0.4em;
   padding: 0.4em 1em;
   position: absolute;
-  top: 20px;
+  top: 10px;
   left: 20px;
 }
 #footer {
   position: relative;
+}
+#footer a.standardView {
+  top: 100px;
 }
