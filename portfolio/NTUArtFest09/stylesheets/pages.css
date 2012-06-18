@@ -1,0 +1,84 @@
+/* CSS Document */
+
+.booklet .unit {
+  width: 260px;
+  height: 500px;
+  padding: 50px 20px 168px;
+  float: left;
+  position: relative;
+}
+
+.booklet .page {
+  width: 260px;
+  height: 500px;
+  padding: 0 20px;
+  float: left;
+}
+
+.booklet .block {
+  padding: 0 20px;
+  float: left;
+}
+
+/* @group Grid System */
+
+.booklet .span_1 {
+  width: 260px;
+}
+.booklet .span_2 {
+  width: 560px;
+}
+.booklet .span_3 {
+  width: 860px;
+}
+.booklet .span_4 {
+  width: 1160px;
+}
+.booklet .span_5 {
+  width: 1460px;
+}
+.booklet .span_6 {
+  width: 1760px;
+}
+.booklet .span_7 {
+  width: 2060px;
+}
+.booklet .span_8 {
+  width: 2360px;
+}
+.booklet .span_9 {
+  width: 2660px;
+}
+.booklet .span_10 {
+  width: 2960px;
+}
+.booklet .span_11 {
+  width: 3260px;
+}
+.booklet .span_12 {
+  width: 3560px;
+}
+.booklet .span_13 {
+  width: 3860px;
+}
+.booklet .span_14 {
+  width: 4160px;
+}
+.booklet .span_15 {
+  width: 4460px;
+}
+
+/* @end */
+
+/* @group Sub Grids */
+
+.booklet .alpha {
+  padding-left: 0;
+}
+
+.booklet .omega {
+  padding-right: 0;
+}
+
+/* @end */
+

@@ -1,0 +1,41 @@
+/* CSS Document */
+
+/* Color Plate
+   ==============
+   background: #f4f7fa
+*/
+
+body {
+  background: #f4f7fa url('../images/white/bkgFloor.jpg') repeat-x 0 bottom;
+}
+
+.unit {
+  background: url('../images/white/bkgPages.png') repeat-x;
+}
+
+.navigator {
+  background: #757575 url('../images/white/bkgUnitNavigator.png') repeat-x;
+}
+
+#navigator {
+  background: #c0d1e1 url('../images/imgBackIcon.png') no-repeat 10px 5px;
+  padding: 5px 1em 5px 2em;
+}
+
+#navigator a {
+  color: #333;
+  padding: 10px 0.3em;
+}
+
+#navigator a:hover {
+  background: #f9ff8f;
+  text-decoration: none;
+}
+
+#navigator a[href='#cover'] {
+  background: none;
+}
+
+#booklet #cover {
+  background: url('../images/white/imgCover.png');
+}

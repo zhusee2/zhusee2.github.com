@@ -1,0 +1,56 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1itional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>流動楽園: 臺大藝術季'09</title>
+<style type="text/css">
+  bady {
+    margin: 0;
+    padding: 0;
+  }
+  #container {
+    width: 960px;
+    height: 720px;
+    background: url('images/imgEntranceCover.jpg') no-repeat;
+    position: relative;
+    margin: 0 auto;
+  }
+  h1, h2, span {
+    display: none;
+  }
+  a {
+    display: block;
+    position: relative;
+  }
+  a.enter {
+    width: 170px;
+    height: 130px;
+    top: 220px;
+    left: 50px;
+  }
+  a.trailer {
+    width: 190px;
+    height: 140px;
+    top: 235px;
+    left: 80px;    
+  }
+</style>
+<link href="facebox/facebox.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="javascripts/jquery-1.3.min.js"></script>
+<script type="text/javascript" src="facebox/facebox.js"></script>
+</head>
+
+<body>
+<div id="container">
+  <h1><span>流動楽園</span></h1>
+  <h2><span>國立臺灣大學藝術季'09</span></h2>
+  <a class="enter" href="booklet.html"><span>進入網站</span></a>
+  <a class="trailer" href="trailer.html" rel="facebox"><span>觀看預告片</span></a>
+</div>
+<script language="javascript">
+$(document).ready(function($) {
+  $('a[rel*=facebox]').facebox() 
+})
+</script>
+</body>
+</html>

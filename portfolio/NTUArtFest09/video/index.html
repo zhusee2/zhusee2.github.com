@@ -1,0 +1,239 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>影片 | 流動楽園: 臺大藝術季'09</title>
+
+<link href="../stylesheets/css.css" rel="stylesheet" type="text/css" />
+<link href="../stylesheets/white.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="../javascripts/jquery-1.3.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+  $('#container')
+    .height($(window).height())
+  
+  initVideoChannel();
+  reachHash();
+  
+});
+
+function initVideoChannel() {
+  $('#video_view > div').addClass('hide');
+  $('#video_wall').removeClass('bar').addClass('wall');
+  $('#video_wall a').unbind().click(function() {
+    var link = $(this).attr('href');
+    /* if($('#video_wall.wall')) $('#video_wall ul') */
+    $('#video_wall').removeClass('wall').addClass('bar');
+    $('#video_wall h3').css('display', 'none');
+    $('#video_view > div.show').removeClass('show').addClass('hide');
+    
+    getObjectViaHash(link)
+      .removeClass('hide').addClass('show')
+      .css('padding', (500 - getObjectViaHash(link).find('object').attr('height'))/2 + 'px 0');
+    
+    location.hash = $(this).attr('href').replace('#', '/');
+    
+    return false;
+  });
+}
+
+function getObjectViaHash(targetObject) {
+  var hash = targetObject.replace('/', '_').replace('#', '');
+  targetObject = '#video_' + hash;
+  
+  return $(targetObject);
+}
+
+function reachHash() {
+  var hash = location.hash;
+  
+  if (hash) { 
+    var target = '#' + hash.replace('#/', '');
+    $('a[href=' + target + ']').click();
+    
+    return true;
+	}
+}
+</script>
+<style type="text/css">
+#container {
+	width: 960px;
+	height: auto;
+}
+
+#learnmore {
+  width: 45px;
+  height:  600px;
+  background: url('../images/white/bkgPages.png') 260px top;
+  padding: 34px 15px;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+}
+#container > #learnmore {
+  position: fixed;
+}
+#learnmore a {
+	color: #1475e2;
+}
+
+#container, #video_channel, #video_channel div {
+	margin: 0 auto;
+	position: relative;
+}
+
+#video_channel {
+	margin-top: 0px;
+}
+
+#video_view div {
+  width:  720px;
+}
+#video_view div.show {
+  display: block;
+}
+#video_view div.hide {
+  display: none;
+}
+
+#video_wall {
+	width: 810px;
+}
+#video_wall ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+#video_wall li {
+  float: left;
+}
+#video_wall li a img {
+	border: 1px solid #999;
+}
+
+#video_wall.wall li {
+	width: 160px;
+  height: 120px;
+  margin: 20px;
+}
+#video_wall.wall li a img {
+  width: 160px;
+}
+#video_wall.wall li.gridButton {
+  display: none;
+}
+
+
+#video_wall.bar ul {
+  float: left;
+}
+#video_wall.bar li {
+	width: 80px;
+  height: 80px;
+  font-size: 70%;
+  line-height: 1.5em;
+  margin: 5px;
+  bottom: 0;
+}
+#video_wall.bar li a img {
+  width: 80px;
+}
+
+</style>
+</head>
+
+<body>
+<div id="container">
+
+  <div id="video_channel">
+    <div id="video_view">
+      <div id="video_trailer_main">
+        <object width="720" height="430"><param name="movie" value="http://www.youtube.com/v/ibT812ihQtg&hl=zh_TW&fs=1&ap=%2526fmt%3D18"></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><embed src="http://www.youtube.com/v/ibT812ihQtg&hl=zh_TW&fs=1&ap=%2526fmt%3D18" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" width="720" height="430"></embed></object>
+      </div>
+      <div id="video_trailer_movie">
+        <object width="720" height="396"><param name="allowfullscreen" value="true" /><param name="allowscriptaccess" value="always" /><param name="movie" value="http://vimeo.com/moogaloop.swf?clip_id=4420557&amp;server=vimeo.com&amp;show_title=1&amp;show_byline=0&amp;show_portrait=0&amp;color=c9ff23&amp;fullscreen=1" /><embed src="http://vimeo.com/moogaloop.swf?clip_id=4420557&amp;server=vimeo.com&amp;show_title=1&amp;show_byline=0&amp;show_portrait=0&amp;color=c9ff23&amp;fullscreen=1" type="application/x-shockwave-flash" allowfullscreen="true" allowscriptaccess="always" width="720" height="396"></embed></object>
+      </div>
+      <div id="video_trailer_artist">
+        <object width="720" height="396"><param name="allowfullscreen" value="true" /><param name="allowscriptaccess" value="always" /><param name="movie" value="http://vimeo.com/moogaloop.swf?clip_id=4425921&amp;server=vimeo.com&amp;show_title=1&amp;show_byline=0&amp;show_portrait=0&amp;color=c9ff23&amp;fullscreen=1" /><embed src="http://vimeo.com/moogaloop.swf?clip_id=4425921&amp;server=vimeo.com&amp;show_title=1&amp;show_byline=0&amp;show_portrait=0&amp;color=c9ff23&amp;fullscreen=1" type="application/x-shockwave-flash" allowfullscreen="true" allowscriptaccess="always" width="720" height="396"></embed></object>
+      </div>
+      <div id="video_trailer_salon">
+        <object width="720" height="430"><param name="movie" value="http://www.youtube.com/v/BqBmabB6LsA&hl=zh_TW&fs=1&rel=0&hd=1&amp;ap=%2526fmt%3D22"></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><embed src="http://www.youtube.com/v/BqBmabB6LsA&hl=zh_TW&fs=1&rel=0&hd=1&amp;ap=%2526fmt%3D22" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" width="720" height="430"></embed></object>
+      </div>
+      <div id="video_trailer_bioexpo">
+        <object width="720" height="430"><param name="movie" value="http://www.youtube.com/v/MPiBsHNmj-Q&hl=zh_TW&fs=1&rel=0&hd=1&amp;ap=%2526fmt%3D22"></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><embed src="http://www.youtube.com/v/MPiBsHNmj-Q&hl=zh_TW&fs=1&rel=0&hd=1&amp;ap=%2526fmt%3D22" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" width="720" height="430"></embed></object>
+      </div>
+      <div id="video_live_qz">
+        <object width="720" height="430"><param name="movie" value="http://www.youtube.com/v/JlkTZNjPxAM&hl=zh_TW&fs=1&rel=0&hd=1&amp;ap=%2526fmt%3D22"></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><embed src="http://www.youtube.com/v/JlkTZNjPxAM&hl=zh_TW&fs=1&rel=0&hd=1&amp;ap=%2526fmt%3D22" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" width="720" height="430"></embed></object>
+      </div>
+      <div id="video_live_pdc">
+        <object width="720" height="430"><param name="movie" value="http://www.youtube.com/v/GWD7xuskKaA&hl=zh_TW&fs=1&rel=0&hd=1&amp;ap=%2526fmt%3D22"></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><embed src="http://www.youtube.com/v/GWD7xuskKaA&hl=zh_TW&fs=1&rel=0&hd=1&amp;ap=%2526fmt%3D22" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" width="720" height="430"></embed></object>
+      </div>
+      <div id="video_live_zx1">
+        <object width="720" height="430"><param name="movie" value="http://www.youtube.com/v/Avnofb63Txo&hl=zh_TW&fs=1&rel=0&hd=1&amp;ap=%2526fmt%3D22"></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><embed src="http://www.youtube.com/v/Avnofb63Txo&hl=zh_TW&fs=1&rel=0&hd=1&amp;ap=%2526fmt%3D22" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" width="720" height="430"></embed></object>
+      </div>
+      <div id="video_live_zx2">
+        <object width="720" height="430"><param name="movie" value="http://www.youtube.com/v/sY-V0M04hXg&hl=zh_TW&fs=1&rel=0&hd=1&amp;ap=%2526fmt%3D22"></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><embed src="http://www.youtube.com/v/sY-V0M04hXg&hl=zh_TW&fs=1&rel=0&hd=1&amp;ap=%2526fmt%3D22" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" width="720" height="430"></embed></object>
+      </div>
+      <div id="video_zxysj_street_performer">
+        <object width="720" height="430"><param name="movie" value="http://www.youtube.com/v/n8_5BfFCJfk&hl=zh_TW&fs=1&rel=0&hd=1&amp;ap=%2526fmt%3D22"></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><embed src="http://www.youtube.com/v/n8_5BfFCJfk&hl=zh_TW&fs=1&rel=0&hd=1&amp;ap=%2526fmt%3D22" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" width="720" height="430"></embed></object>
+      </div>
+    </div>
+    <div id="video_wall">
+      <h3>流動楽園影片集: 臺大藝術季'09</h3>
+      <ul>
+        <li class="gridButton"><a href="#/browse" onclick="initVideoChannel(); return false;">
+          <img src="images/imgGrid.gif" alt="格狀瀏覽" />
+        </a>格狀瀏覽</li>
+        <li><a href="#trailer/main">
+          <img src="images/trailer_main.jpg" alt="流動楽園宣傳片" />
+        </a>流動楽園宣傳片</li>
+        <li><a href="#trailer/movie">
+          <img src="images/trailer_movie.jpg" alt="狂想影展" />
+        </a>狂想影展</li>
+        <li><a href="#trailer/artist">
+          <img src="images/trailer_artist.jpg" alt="駐校藝術家" />
+        </a>駐校藝術家</li>
+        <li><a href="#trailer/salon">
+          <img src="images/trailer_salon.jpg" alt="藝文沙龍" />
+        </a>藝文沙龍</li>
+        <li><a href="#trailer/bioexpo">
+          <img src="images/trailer_bioexpo.jpg" alt="生物藝術展" />
+        </a>生物藝術展</li>
+        <li><a href="#live/qz">
+          <img src="images/live_gzwan.jpg" alt="盧廣仲 - 我愛你" />
+        </a>盧廣仲 - 我愛你</li>
+        <li><a href="#live/pdc">
+          <img src="images/live_pdc.jpg" alt="台大熱舞社 - Dreaming" />
+        </a>台大熱舞社 - Dreaming</li>
+        <li><a href="#live/zx1">
+          <img src="images/live_zxbw.jpg" alt="張懸 - Beautiful Woman" />
+        </a>張懸 - Beautiful Woman</li>
+        <li><a href="#live/zx2">
+          <img src="images/live_zxmy.jpg" alt="張懸 - 模樣" />
+        </a>張懸 - 模樣</li>
+        <li><a href="#zxysj/street_performer">
+          <img src="http://i3.ytimg.com/vi/n8_5BfFCJfk/default.jpg" alt="街頭藝人 x 台大馬爺 " />
+        </a>街頭藝人 x 台大馬爺</li>
+      </ul>
+      <div style="clear: both;"></div>
+    </div>
+  </div>
+
+  <div id="learnmore">
+    <h1><span>流動樂園 '09</span></h1>
+    <h2><span><a href="../booklet.html">快來瞧瞧導覽手冊</a></span></h2>
+  </div>
+
+</div>
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-8277788-1");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+</body>
+</html>

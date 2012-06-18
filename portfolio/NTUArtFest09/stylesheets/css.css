@@ -1,0 +1,370 @@
+@import url("pages.css");
+
+/* CSS Document */
+
+/* Color Plate
+   ==============
+   black: #0b0b0b
+*/
+
+body {
+  font: 15px/25px Helvetica, "Lucida Grande", Arial, LiHeiPro, STXihei, "Microsoft Jhenghei", STHeiti, SimHei, sans-serif;
+  color: #333333;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+/*
+h3, h4 {
+	font-family: Times, "Times New Roman", Courior, serif;
+	font-weight: bold;
+}*/
+
+#container {
+  width: 30000px;
+  min-height: 650px;
+  height: 650px;
+  position: relative;
+  overflow: hidden;
+}
+
+#booklet {
+  position: relative;
+  top: 50%;
+  left: 100px;
+  margin-top: -300px;
+}
+
+/* @group Grid Extensions */
+
+#booklet .unit.swap {
+  background-position: 300px top;
+}
+
+/* @end */
+
+/* @group Navigators */
+
+#navigator {
+  position: fixed;
+  background: #0b0b0b url('../images/imgBackIcon.png') no-repeat 10px 10px;
+  margin-left: 20px;
+  padding: 10px 30px 0;
+  -webkit-border-radius: 1em;
+  -moz-border-radius: 1em;
+  z-index: 1000;
+}
+
+#navigator a {
+  color: white;
+  padding: 0 0.3em;
+}
+
+#navigator a[href='#cover'] {
+  width: 17px;
+  margin-left: -17px;
+}
+
+#navigator a[href='#cover'].hover {
+  text-decoration: none;
+}
+
+#booklet .unit .navigator {
+  width: 100%;
+  height: 30px;
+  color: white;
+  /*
+  font-size: 13px;
+  line-height: 20px;
+  */
+  margin-top: -50px;
+  margin-left: -20px;
+  padding: 20px 20px 10px;
+}
+
+#booklet .unit.swap .navigator {
+  height: 25px;
+  background-position: 300px top;
+  padding-top: 25px;
+}
+/*
+#booklet .span_1 .navigator {
+  line-height: 15px;
+}
+*/
+#booklet .unit .navigator a {
+  color: white;
+  text-decoration: none;
+  display: inline-block;
+}
+
+#booklet .unit .navigator a:hover {
+  text-decoration: underline;
+}
+
+#booklet .unit .navigator a.back {
+  padding-left: 17px;
+  background: url('../images/imgBackIcon.png') no-repeat;
+}
+
+#booklet .unit .navigator span {
+  float: right;
+  display: none;
+}
+
+/* @end */
+
+/* @group Cover Page */
+
+#booklet #cover {
+  width: 260px;
+}
+
+#booklet #cover h1 span, #booklet #cover h2 span {
+  display: none;
+}
+
+#booklet #cover h1 {
+  width: 300px;
+  height: 220px;
+  background: url('../images/imgCoverH1.png') no-repeat;
+  margin: -41px 0 0 -20px;
+  padding: 0;
+}
+
+#booklet #cover h2 {
+  width: 48px;
+  height: 436px;
+  background: url('../images/imgCoverH2.png') no-repeat;
+  padding: 0;
+  position: relative;
+  left: -20px;
+  bottom: 105px;
+}
+
+/* @end */
+
+/* @group Units */
+
+/* @group General */
+
+#booklet .unit h3 {
+  font-size: 200%;
+  line-height: 1em;
+}
+#booklet .unit h4 {
+  margin-bottom: -1em;
+}
+#booklet .unit h5 {
+  font-size: 100%;
+  margin-bottom: -0.5em;
+}
+#booklet .leaveHeading {
+	margin-top: 1em !important;
+}
+#booklet .note {
+  background: #dedede;
+  padding: 0.5em;
+  padding-left: 2em;
+}
+
+/* @end */
+
+/* @group Widgets */
+
+.unit .legend {
+  font-size: 13px;
+  line-height: 18px;
+  margin: 0.5em 0;
+}
+
+.unit table.calendar {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.unit table.calendar tr td {
+  background: white;
+  border-bottom: 1px solid;
+  padding: 0.5em 1em;
+}
+
+.unit table tr.swap td, .unit table td.swap {
+  background: #ededed !important;
+}
+
+/* @end */
+
+#booklet #map #campusMap {
+  width: 100%;
+  height: 500px;
+  background: url('../images/bkgCampusMap.jpg') no-repeat center top;
+}
+
+#booklet #map #campusMap a {
+  background: white;
+  color: #986600;
+  border: 1px solid;
+  -webkit-border-radius: 1em;
+  -moz-border-radius: 1em;
+  padding: 10px 20px;
+}
+
+/* @group Map Lnks */
+#campusMap a#opening_link {
+  position: absolute;
+  top: 345px;
+  left: 120px;
+}
+#campusMap a#decorArts_link {
+  position: absolute;
+  top: 410px;
+  left: 120px;
+}
+#campusMap a#exhibitions_link {
+  position: absolute;
+  top: 255px;
+  left: 440px;
+}
+#campusMap a#artists_link {
+  position: absolute;
+  top: 500px;
+  left: 310px;
+}
+#campusMap a#artmovies_link {
+  position: absolute;
+  top: 210px;
+  left: 260px;
+}
+#campusMap a#salon_link {
+  position: absolute;
+  top: 475px;
+  left: 100px;
+}
+#campusMap a#clubs_link {
+  position: absolute;
+  top: 90px;
+  left: 360px;
+}
+
+/* @end */
+
+#booklet #introduction > div+div {
+	column-width: 260px;
+	column-gap: 40px;
+	-moz-column-width: 260px;
+	-moz-column-gap: 40px;
+	-webkit-column-width: 260px;
+	-webkit-column-gap: 40px;
+}
+
+#booklet #moviesIndoors .page img, #booklet #moviesOutdoors .page img {
+  height: 250px;
+  margin: 5px auto;
+  display: block;
+}
+
+#booklet #artists table#zxysjCalendar {
+  font-size: 60%;
+  line-height: 1.5em;
+}
+
+/* @group Staff List
+ */
+ 
+#staffList {
+  width: 655px;
+  height: 430px;
+  overflow: auto;
+}
+
+#staffList h4 {
+  margin-bottom: -1em;
+}
+
+
+/* @end */
+
+/* @end */
+
+/* @group Color Themes */
+
+/* Theme Colors
+   Red: #f30a0a
+   Orage: #f3a90a
+   Yellow: #ffea00
+   Green: #99cc00
+   Blue: #1475e2
+   D.Blue: #00049f
+   Purple: #df18a5 */
+
+#booklet .brown .navigator {
+  background-color: #986600;
+}
+#booklet .brown h3, #booklet  .brown h4 {
+  color: #986600;
+}
+
+#booklet .red .navigator {
+  background-color: #f30a0a;
+}
+#booklet .red h3, #booklet  .red h4 {
+  color: #f30a0a;
+}
+
+#booklet .orange .navigator {
+  background-color: #f3a90a;
+}
+#booklet .orange h3, #booklet  .orange h4 {
+  color: #f3a90a;
+}
+
+#booklet .yellow .navigator {
+  background-color: #ffea00;
+}
+#booklet .yellow h3, #booklet  .yellow h4 {
+  color: #ffea00;
+}
+
+#booklet .green .navigator {
+  background-color: #99cc00;
+}
+#booklet .green h3, #booklet  .green h4 {
+  color: #99cc00;
+}
+#booklet .blue .navigator {
+  background-color: #1475e2;
+}
+#booklet .blue h3, #booklet  .blue h4 {
+  color: #1475e2;
+}
+#booklet .darkBlue .navigator {
+  background-color: #00049f;
+}
+#booklet .darkBlue h3, #booklet  .darkBlue h4 {
+  color: #00049f;
+}
+#booklet .purple .navigator {
+  background-color: #df18a5;
+}
+#booklet .purple h3, #booklet  .purple h4 {
+  color: #df18a5;
+}
+
+/* @end */
+
+p#footer {
+  width: 95%;
+  font-size: 11px;
+  line-height: 15px;
+  position: absolute;
+  left: 3%;
+  bottom: 140px;
+}
