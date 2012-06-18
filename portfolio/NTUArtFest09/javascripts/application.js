@@ -7,7 +7,9 @@ if($.browser.msie && $.browser.version.substr(0,1) < 7) {
 $(document).ready(function(){
   setTimeout(initialize, 300);
   $('a[rel*=facebox]').facebox()
-  enableHorizonScroll();
+  if(!navigator.platform.match(/Mac/)) {
+    enableHorizonScroll();
+  }
 });
 
 /* Application Supporting Functions */
@@ -67,9 +69,8 @@ function enableTableSwap() {
 
 function enableHorizonScroll() {
   $(document).mousewheel(function(event, delta) {
-    if(navigator.appVersion.indexOf("Win")!=-1) delta = delta * 10;
     var currentX = $(window).scrollLeft(),
-        targetX = (currentX - delta);
+        targetX = (currentX - delta*15);
     $(window).scrollLeft(targetX);
     event.preventDefault();
   });
